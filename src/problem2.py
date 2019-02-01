@@ -74,15 +74,21 @@ def shape(n):
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
     ####################################################################
     for k in range(n):
-        for i in range(n-k):
-            print(n-k, end='')
+        for i in range(1, n-k+1):
+            print(k+1, end='')
+        print("*", end='')
+        for j in range(n-k-1):
+            print('', end='')
+        for z in range(k+1):
+            print(z + 1, end='')
+
         print()
 
 # ----------------------------------------------------------------------
