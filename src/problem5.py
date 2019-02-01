@@ -149,13 +149,35 @@ def problem5(seq_of_seq):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     seq = []
-    largest = -999999
-    for k in range(len(seq_of_seq)):
-        for i in range(len(seq_of_seq[k])):
-            if seq_of_seq[k][i] > largest:
-                largest = seq_of_seq[k][i]
-            seq = seq + largest
-    return seq
+    for j in range(len(seq_of_seq)):
+        if seq_of_seq[j] == seq:
+            seq = seq
+        else:
+
+            for k in range(len(seq_of_seq)):
+                 largest = 0
+
+                 for i in range(len(seq_of_seq[k])):
+                    if seq_of_seq[k][i] > largest:
+                        largest = seq_of_seq[k][i]
+                 seq = seq + [largest]
+
+
+
+        for z in range(len(seq)-1):
+            if seq[z] == 0:
+                seq.remove(0)
+
+            if seq[len(seq)-1] == 0:
+                seq.remove(0)
+
+        return seq
+
+
+
+
+
+
 
 
 
